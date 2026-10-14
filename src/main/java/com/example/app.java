@@ -1,12 +1,17 @@
-package main.java.com.example;
+package com.example;
 
 public class app {
-    public int add(int a, int b) {
-        return a + b;
-    }
+    public boolean isPalindrome(int n) {
+        if (n < 0) return false;
 
-    public static void main(String[] args) {
-        app obj = new app();
-        System.out.println(obj.add(2, 3));
+        int original = n;
+        long reversed = 0;
+
+        while (n > 0) {
+            reversed = reversed * 10 + n % 10;
+            n /= 10;
+        }
+
+        return original == reversed;
     }
 }

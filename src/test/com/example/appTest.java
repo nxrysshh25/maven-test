@@ -1,25 +1,26 @@
 package com.example;
 
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
-public class AppTest {
-
+public class appTest {
     @Test
-    public void testAdd() {
-        App app = new App();
-        assertEquals(5, app.add(2, 3));
+    public void testPalindrome() {
+        assertTrue(new app().isPalindrome(121));
     }
 
     @Test
-    public void testAddNegative() {
-        App app = new App();
-        assertEquals(-5, app.add(-2, -3));
+    public void testNotPalindrome() {
+        assertFalse(new app().isPalindrome(123));
     }
 
     @Test
-    public void testAddZero() {
-        App app = new App();
-        assertEquals(7, app.add(7, 0));
+    public void testSingleDigit() {
+        assertTrue(new app().isPalindrome(7));
+    }
+
+    @Test
+    public void testNegativeNumber() {
+        assertFalse(new app().isPalindrome(-121));
     }
 }
