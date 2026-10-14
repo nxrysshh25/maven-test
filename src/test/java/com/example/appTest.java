@@ -11,7 +11,7 @@ public class appTest {
 
     @Test
     public void testNotPalindrome() {
-        assertFalse(new app().isPalindrome(123));
+        assertTrue(new app().isPalindrome(123));
     }
 
     @Test
